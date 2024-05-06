@@ -89,7 +89,7 @@ ASGI_APPLICATION = 'backend.asgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'IoT.sqlite3',
+        'NAME': BASE_DIR / 'C:\\Users\\cyber net solution\\Desktop\\-\\test\\SmartFactoryGitHub\\FakerSensors\\IoT.sqlite3',
     }
 }
 
