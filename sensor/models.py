@@ -1,72 +1,63 @@
 # models.py
 from django.db import models
 
-class AData(models.Model):
+class TemperatureData(models.Model):
     id = models.AutoField(primary_key=True)
     SensorID = models.TextField()
     Date_n_Time = models.TextField()
-    A = models.TextField()
+    Temperature = models.TextField()
 
     class Meta:
-        db_table = 'A_Data'  # Set the table name if it differs from the model name
+        db_table = 'Temperature_Data'  # Set the table name if it differs from the model name
         app_label = 'sensor'  # Specify the app label if necessary
 
-class BData(models.Model):
+class HumidityData(models.Model):
     id = models.AutoField(primary_key=True)
     SensorID = models.TextField()
     Date_n_Time = models.TextField()
-    B = models.TextField()
+    Humidity = models.TextField()
 
     class Meta:
-        db_table = 'B_Data'  # Set the table name if it differs from the model name
+        db_table = 'Humidity_Data'  # Set the table name if it differs from the model name
         app_label = 'sensor'  # Specify the app label if necessary
 
-class WData(models.Model):
+class FlowData(models.Model):
     id = models.AutoField(primary_key=True)
     SensorID = models.TextField()
     Date_n_Time = models.TextField()
-    W = models.TextField()
+    Flow = models.TextField()
 
     class Meta:
-        db_table = 'W_Data'  # Set the table name if it differs from the model name
+        db_table = 'Flow_Data'  # Set the table name if it differs from the model name
         app_label = 'sensor'  # Specify the app label if necessary
 
-class XData(models.Model):
+class PositionData(models.Model):
     id = models.AutoField(primary_key=True)
     SensorID = models.TextField()
     Date_n_Time = models.TextField()
-    X = models.TextField()
+    Position = models.TextField()
 
     class Meta:
-        db_table = 'X_Data'  # Set the table name if it differs from the model name
+        db_table = 'Position_Data'  # Set the table name if it differs from the model name
         app_label = 'sensor'  # Specify the app label if necessary
 
-class YData(models.Model):
+class PaintLevelData(models.Model):
     id = models.AutoField(primary_key=True)
     SensorID = models.TextField()
     Date_n_Time = models.TextField()
-    Y = models.TextField()
+    PaintLevel = models.TextField()
 
     class Meta:
-        db_table = 'Y_Data'  # Set the table name if it differs from the model name
+        db_table = 'PaintLevel_Data'  # Set the table name if it differs from the model name
         app_label = 'sensor'  # Specify the app label if necessary
 
-class ZData(models.Model):
+class SurfaceQualityData(models.Model):
     id = models.AutoField(primary_key=True)
     SensorID = models.TextField()
     Date_n_Time = models.TextField()
-    Z = models.TextField()
+    SurfaceQuality = models.TextField()
 
     class Meta:
-        db_table = 'Z_Data'  # Set the table name if it differs from the model name
+        db_table = 'SurfaceQuality_Data'  # Set the table name if it differs from the model name
         app_label = 'sensor'  # Specify the app label if necessary
 
-class LData(models.Model):
-    id = models.AutoField(primary_key=True)
-    SensorID = models.TextField()
-    Date_n_Time = models.TextField()
-    Z = models.TextField()
-
-    class Meta:
-        db_table = 'L_Data'  # Set the table name if it differs from the model name
-        app_label = 'sensor'  # Specify the app label if necessary

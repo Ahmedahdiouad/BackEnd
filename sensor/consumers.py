@@ -9,7 +9,7 @@ django.setup()
 
 from channels.generic.websocket import AsyncWebsocketConsumer
 from channels.db import database_sync_to_async
-from sensor.models import AData, BData, WData, XData, YData, ZData
+from sensor.models import TemperatureData, HumidityData, FlowData, PositionData, PaintLevelData, SurfaceQualityData
 
 
 class DataConsumer(AsyncWebsocketConsumer):
@@ -30,7 +30,7 @@ class DataConsumer(AsyncWebsocketConsumer):
         while True:
             # Fetch the latest data from each model and serialize it into JSON format
             serialized_data = []
-            for model_class in [AData, BData, WData, XData, YData, ZData]:
+            for model_class in [TemperatureData, HumidityData, FlowData, PositionData, PaintLevelData, SurfaceQualityData]:
                 latest_five_records = await self.get_latest_records(model_class)
                 serialized_data.extend([
                     {
